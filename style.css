@@ -1,3 +1,262 @@
-Body{
-    
+
+url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+}
+
+header {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    height: 50px;
+}
+
+.header-light {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background: radial-gradient(circle, rgba(0, 255, 238, 0.8) 0%, rgba(255,255,255,0) 80%)
+    z-index: 0;
+    top: 50px;
+}
+
+nav {
+    flex: 1;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+	position: relative;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: block;
+    position: absolute;
+    background-color: #000000;
+    min-width: 100px;
+    z-index: 1;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s ease;
+    margin-top: 25px;
+}
+
+.dropdown:hover .dropdown-content {
+    height: 140px;
+}
+
+.dropdown-content li {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: black;
+}
+
+.dropdown-content li:hover {
+    background-color: #000000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.logo img {
+    max-height: 40px;
+    padding-top: 4px;
+}
+
+.profile-button button {
+    background-color: black;
+    color: white;
+    padding: 8px 16px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 1px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all .4s ease-in-out;
+
+}
+
+.profile-button button:hover {
+    background-color: white;
+    color: black;
+    transition: all .2s ease-in-out;
+}
+
+
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.page-wrapper {
+    padding-top: 5%;
+    display: flex;
+    -webkit-display: flex;
+    justify-content: space-around;
+  }
+  
+  
+  .card-wrapper {
+    background-size: cover;   
+    max-height: 30px;
+    overflow: hidden;
+    padding: 2rem;
+    width: 20%;  
+    transition: max-height 500ms ease-in-out;  
+  }
+
+  .card-wrapper.safe:hover {
+    box-shadow: 0 0 8px #00ff00;
+}
+
+.card-wrapper.euclid:hover {
+    box-shadow: 0 0 8px #ffff00;
+}
+
+.card-wrapper.keter:hover {
+    box-shadow: 0 0 8px #ff0000;
+}
+  
+  .card-wrapper:hover {
+    box-shadow: 0 0 8px #d3d3d3;    
+    cursor: pointer;
+    max-height: 300px;
+    transition:all .3s ease-in-out
+  }
+  .card-details,
+  .reveal-details {
+    font-weight: 300;
+    margin-bottom: 50px;
+    margin-top: -9px;
+  }
+  
+  .card-height-animate {
+    height: 300px; 
+  }
+
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('Images/scp_illust_2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content img {
+    max-width: 200px;
+}
+
+.gradient {
+    width: 100%;
+    height: 50%;
+    display: block;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 21%, rgba(0,0,0,1) 27%, rgba(0,0,0,0.5608368347338936) 77%, rgba(0,0,0,0) 92%);    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.hero-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center; /
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+#card-title{
+    margin-bottom: 10px;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    margin-bottom: 30px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all .9s ease-in-out;
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    color: #fff;
+    transition: height 3s ease-in-out;
+    overflow: hidden;
+}
+
+
+.card-content:hover{
+    box-shadow: 10px 10px 15px #d3d3d3;    
+    cursor: pointer;
+    max-height: 300px;
+}
+
+.card:hover .card-content {
+    height: 100%;
+    transition: height 3s ease-in-out;
+}
+
+.card-height-animate {
+    height: 300px; 
+  }
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
 }
